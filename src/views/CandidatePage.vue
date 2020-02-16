@@ -1,12 +1,12 @@
 <script lang="ts">
-import Vue from "vue";
+import Vue from 'vue'
 
-import Candidate from "@/components/Candidate.vue";
+import Candidate from '@/components/Candidate.vue'
 
 export default Vue.extend({
-  name: "CandidatePage",
+  name: 'CandidatePage',
   components: { Candidate }
-});
+})
 </script>
 
 <template>

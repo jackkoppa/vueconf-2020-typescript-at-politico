@@ -1,33 +1,33 @@
 <script lang="ts">
-import Vue from "vue";
+import Vue from 'vue'
 
-import { candidateApi } from "@/api";
-import { Candidate, CandidatePartyEnum } from "@/api/candidate";
+import { candidateApi } from '@/api'
+import { Candidate, CandidatePartyEnum } from '@/api/candidate'
 
 const defaultCandidate: Candidate = {
-  firstName: "",
-  lastName: "",
+  firstName: '',
+  lastName: '',
   party: CandidatePartyEnum.DEMOCRAT,
-  electionYear: "2020",
+  electionYear: '2020',
   nationalPollingAverage: 0.0
-};
+}
 
 export default Vue.extend({
-  name: "AddCandidate",
-  data() {
+  name: 'AddCandidate',
+  data () {
     return {
       CandidatePartyEnum,
       candidate: { ...defaultCandidate }
-    };
+    }
   },
   methods: {
-    async submitCandidate() {
-      await candidateApi.addCandidate(this.candidate);
-      this.$emit("candidateAdded");
-      this.candidate = { ...defaultCandidate };
+    async submitCandidate () {
+      await candidateApi.addCandidate(this.candidate)
+      this.$emit('candidateAdded')
+      this.candidate = { ...defaultCandidate }
     }
   }
-});
+})
 </script>
 
 <template>

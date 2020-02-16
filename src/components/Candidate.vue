@@ -1,32 +1,32 @@
 <script lang="ts">
-import Vue from "vue";
+import Vue from 'vue'
 
-import { candidateApi } from "@/api";
-import { Candidate, CandidatePartyEnum } from "@/api/candidate";
-import AddCandidate from "@/components/AddCandidate.vue";
+import { candidateApi } from '@/api'
+import { Candidate } from '@/api/candidate'
+import AddCandidate from '@/components/AddCandidate.vue'
 
 export default Vue.extend({
-  name: "Candidate",
+  name: 'Candidate',
   components: { AddCandidate },
-  data() {
-    return { candidates: [] as Candidate[] };
+  data () {
+    return { candidates: [] as Candidate[] }
   },
-  async created() {
-    await this.getCandidates();
+  async created () {
+    await this.getCandidates()
   },
   methods: {
-    async deleteCandidate(id?: number) {
+    async deleteCandidate (id?: number) {
       if (id != null) {
-        await candidateApi.deleteCandidate(id);
-        await this.getCandidates();
+        await candidateApi.deleteCandidate(id)
+        await this.getCandidates()
       }
     },
-    async getCandidates() {
-      const candidatesResponse = await candidateApi.getCandidates();
-      this.candidates = candidatesResponse.data;
+    async getCandidates () {
+      const candidatesResponse = await candidateApi.getCandidates()
+      this.candidates = candidatesResponse.data
     }
   }
-});
+})
 </script>
 
 <template>

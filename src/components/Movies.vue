@@ -1,38 +1,38 @@
 <script lang="ts">
-import Vue from "vue";
+import Vue from 'vue'
 
-import { timesMoviesApi } from "@/api";
-import { Movie } from "@/api/timesmovies";
+import { timesMoviesApi } from '@/api'
+import { Movie } from '@/api/timesmovies'
 
 export default Vue.extend({
-  name: "Movies",
-  data() {
+  name: 'Movies',
+  data () {
     return {
       isLoading: false,
       movies: [] as Movie[],
-      keyword: ""
-    };
+      keyword: ''
+    }
   },
-  async created() {
-    await this.performSearch();
+  async created () {
+    await this.performSearch()
   },
   methods: {
-    link(movie: Movie): string | undefined {
-      return movie.link && movie.link.url;
+    link (movie: Movie): string | undefined {
+      return movie.link && movie.link.url
     },
-    async performSearch() {
+    async performSearch () {
       try {
-        this.isLoading = true;
+        this.isLoading = true
         const reviewsResponse = await timesMoviesApi.reviewsSearchJsonGet(
           this.keyword
-        );
-        this.movies = reviewsResponse.data?.results ?? [];
+        )
+        this.movies = reviewsResponse.data?.results ?? []
       } finally {
-        this.isLoading = false;
+        this.isLoading = false
       }
     }
   }
-});
+})
 </script>
 
 <template>
