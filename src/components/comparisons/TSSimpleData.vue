@@ -1,16 +1,18 @@
-<script>
-import axios from 'axios'
+<script lang="ts">
+import Vue from 'vue'
+import { candidateApi } from '@/api'
+import { Candidate } from '@/api/candidate'
 
-export default {
-  name: 'JSSimpleData',
+export default Vue.extend({
+  name: 'TSSimpleData',
   data () {
-    return { candidates: [] }
+    return { candidates: [] as Candidate[] }
   },
   async created () {
-    const response = await axios.get('https://vueconf-2020-ts-api-demo.herokuapp.com/candidates')
+    const response = await candidateApi.getCandidates()
     this.candidates = response.data
   }
-}
+})
 </script>
 
 <template>
