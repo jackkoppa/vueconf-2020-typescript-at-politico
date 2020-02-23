@@ -1,29 +1,13 @@
 # vueconf-2020-typescript-at-politico
 
-## Project setup
-```
-npm install
-```
+[![Build Status](https://travis-ci.org/jackkoppa/vueconf-2020-typescript-at-politico.svg?branch=master)](https://travis-ci.org/jackkoppa/vueconf-2020-typescript-at-politico)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Purpose
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Demo of enterprise-level Vue + TypeScript tecniques, as practiced @ [POLITICO](https://github.com/politico)
 
-### Run your unit tests
-```
-npm run test:unit
-```
+## Additional Resources
 
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+* Demo API, for type-safe client codegen:
+  * Repo: https://github.com/jackkoppa/vueconf-2020-ts-api-demo
+  * Deployment: https://vueconf-2020-ts-api-demo.herokuapp.com/v2/api-docs 
