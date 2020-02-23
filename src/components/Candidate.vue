@@ -34,8 +34,8 @@ export default Vue.extend({
     <h4>
       <em>
         Note: This page makes calls to a demo, free-tier Heroku Spring Boot API
-        (<a href="https://github.com/jackkoppa/gs-spring-boot">repo</a>,
-        <a href="https://typesafe-api-demo-java.herokuapp.com/">deployment</a>),
+        (<a href="https://github.com/jackkoppa/vueconf-2020-ts-api-demo">repo</a>,
+        <a href="https://vueconf-2020-ts-api-demo.herokuapp.com/v2/api-docs">deployment</a>),
         with simple, dummy data.<br />
         That API may be dormant at times, and require an initial call to
         restart.<br />

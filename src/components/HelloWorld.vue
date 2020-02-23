@@ -5,7 +5,7 @@
       For details on how we're handling type-safe APIs,<br />
       check out the
       <a
-        href="https://github.com/jackkoppa/typesafe-api-clients-demo"
+        href="https://github.com/jackkoppa/vueconf-2020-typescript-at-politico"
         target="_blank"
         rel="noopener"
         >repo here</a
