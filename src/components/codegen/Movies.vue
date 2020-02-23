@@ -56,7 +56,7 @@ export default Vue.extend({
     <transition-group name="movie-list" tag="ul" class="movie-list">
       <li
         v-for="movie in movies"
-        :key="movie.link"
+        :key="movie.headline"
         class="movie__card movie-list__item"
       >
         <component :is="link(movie) ? 'a' : 'div'" :href="link(movie)"

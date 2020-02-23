@@ -1,12 +1,12 @@
 <script lang="ts">
 import Vue from 'vue'
 
-import HelloWorld from '@/components/HelloWorld.vue'
+import Intro from '@/components/Intro.vue'
 
 export default Vue.extend({
   name: 'HomePage',
   components: {
-    HelloWorld
+    Intro
   }
 })
 </script>
@@ -14,6 +14,6 @@ export default Vue.extend({
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Demo Vue App, for Type-Safe APIs" />
+    <Intro />
   </div>
 </template>

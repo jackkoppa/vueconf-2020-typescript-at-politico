@@ -3,10 +3,10 @@ import Vue from 'vue'
 
 import { candidateApi } from '@/api'
 import { Candidate } from '@/api/candidate'
-import AddCandidate from '@/components/AddCandidate.vue'
+import AddCandidate from '@/components/codegen/AddCandidate.vue'
 
 export default Vue.extend({
-  name: 'Candidate',
+  name: 'Candidates',
   components: { AddCandidate },
   data () {
     return { candidates: [] as Candidate[] }
