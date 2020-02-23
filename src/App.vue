@@ -7,10 +7,10 @@ export default Vue.extend({
 
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/movies">NYTimes Movie Reviews</router-link> |
-      <router-link to="/candidate">Custom Candidate API</router-link>
+    <div class="nav">
+      <router-link to="/">Intro</router-link> |
+      <router-link to="/comparisons">JS Pain Points &amp; TS Wins </router-link> |
+      <router-link to="/codegen">Tools: Type-Safe API Codegen</router-link>
     </div>
     <router-view />
   </div>
@@ -31,7 +31,7 @@ button {
   cursor: pointer;
 }
 
-#nav {
+.nav {
   padding: 30px;
 
   a {
