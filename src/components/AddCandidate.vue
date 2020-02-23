@@ -8,7 +8,7 @@ const defaultCandidate: Candidate = {
   firstName: '',
   lastName: '',
   party: CandidatePartyEnum.DEMOCRAT,
-  electionYear: '2020',
+  cycle: '2020',
   nationalPollingAverage: 0.0
 }
 
@@ -51,7 +51,7 @@ export default Vue.extend({
       </div>
       <div class="field-group">
         <label for="election-year">Election Cycle</label>
-        <select v-model="candidate.electionYear" id="election-year">
+        <select v-model="candidate.cycle" id="election-year">
           <option>2016</option>
           <option>2018</option>
           <option>2020</option>

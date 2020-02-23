@@ -12,7 +12,7 @@ const apiClients = [
   // Custom API created here: https://github.com/jackkoppa/gs-spring-boot
   {
     name: 'candidate',
-    spec: 'https://typesafe-api-demo-java.herokuapp.com/v2/api-docs'
+    spec: 'https://vueconf-2020-ts-api-demo.herokuapp.com/v2/api-docs'
     // For generating locally
     // spec: "http://localhost:8080/v2/api-docs"
   },

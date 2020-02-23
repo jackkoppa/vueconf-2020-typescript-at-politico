@@ -18,7 +18,7 @@ import { Configuration } from "./configuration";
 // @ts-ignore
 import globalAxios, { AxiosPromise, AxiosInstance } from 'axios';
 
-export const BASE_PATH = "http://typesafe-api-demo-java.herokuapp.com".replace(/\/+$/, "");
+export const BASE_PATH = "http://vueconf-2020-ts-api-demo.herokuapp.com".replace(/\/+$/, "");
 
 /**
  *
