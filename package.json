@@ -62,7 +62,9 @@
     "parserOptions": {
       "ecmaVersion": 2020
     },
-    "rules": {},
+    "rules": {
+      "space-before-function-paren": ["error", "never"]
+    },
     "overrides": [
       {
         "files": [

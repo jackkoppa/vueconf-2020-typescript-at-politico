@@ -6,21 +6,21 @@ import { Movie } from '@/api/timesmovies'
 
 export default Vue.extend({
   name: 'Movies',
-  data () {
+  data() {
     return {
       isLoading: false,
       movies: [] as Movie[],
       keyword: ''
     }
   },
-  async created () {
+  async created() {
     await this.performSearch()
   },
   methods: {
-    link (movie: Movie): string | undefined {
+    link(movie: Movie): string | undefined {
       return movie.link && movie.link.url
     },
-    async performSearch () {
+    async performSearch() {
       try {
         this.isLoading = true
         const reviewsResponse = await timesMoviesApi.reviewsSearchJsonGet(

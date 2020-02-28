@@ -8,20 +8,20 @@ import AddCandidate from '@/components/codegen/AddCandidate.vue'
 export default Vue.extend({
   name: 'Candidates',
   components: { AddCandidate },
-  data () {
+  data() {
     return { candidates: [] as Candidate[] }
   },
-  async created () {
+  async created() {
     await this.getCandidates()
   },
   methods: {
-    async deleteCandidate (id?: number) {
+    async deleteCandidate(id?: number) {
       if (id != null) {
         await candidateApi.deleteCandidate(id)
         await this.getCandidates()
       }
     },
-    async getCandidates () {
+    async getCandidates() {
       const candidatesResponse = await candidateApi.getCandidates()
       this.candidates = candidatesResponse.data
     }

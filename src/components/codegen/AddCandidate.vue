@@ -14,14 +14,14 @@ const defaultCandidate: Candidate = {
 
 export default Vue.extend({
   name: 'AddCandidate',
-  data () {
+  data() {
     return {
       CandidatePartyEnum,
       candidate: { ...defaultCandidate }
     }
   },
   methods: {
-    async submitCandidate () {
+    async submitCandidate() {
       await candidateApi.addCandidate(this.candidate)
       this.$emit('candidateAdded')
       this.candidate = { ...defaultCandidate }

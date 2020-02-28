@@ -1,14 +1,20 @@
 <script lang="ts">
 import Vue from 'vue'
 import { candidateApi } from '@/api'
-import { Candidate } from '@/api/candidate'
+import { Candidate, CandidatePartyEnum } from '@/api/candidate'
 
 export default Vue.extend({
   name: 'TSSimpleData',
-  data () {
+  data() {
     return { candidates: [] as Candidate[] }
   },
-  async created () {
+  computed: {
+    democrats(): Candidate[] {
+      return this.candidates
+        .filter(candidate => candidate.party === CandidatePartyEnum.DEMOCRAT)
+    }
+  },
+  async created() {
     const response = await candidateApi.getCandidates()
     this.candidates = response.data
   }
@@ -17,7 +23,7 @@ export default Vue.extend({
 
 <template>
     <div>
-      <section v-for="candidate in candidates" :key="candidate.id" class="candidate">
+      <section v-for="candidate in democrats" :key="candidate.id" class="candidate">
         <span>{{ candidate.firstName }} {{ candidate.lastName }}</span>
       </section>
     </div>

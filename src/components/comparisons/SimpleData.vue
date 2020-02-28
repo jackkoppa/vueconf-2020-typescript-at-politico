@@ -17,7 +17,7 @@ export default Vue.extend({
     JSSimpleData,
     TSSimpleData
   },
-  data () { return { links } }
+  data() { return { links } }
 })
 </script>
 
