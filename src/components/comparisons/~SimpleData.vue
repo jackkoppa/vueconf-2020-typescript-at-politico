@@ -1,8 +1,8 @@
 <script lang="ts">
 import Vue from 'vue'
 
-import JSSimpleData from './JSSimpleData.vue'
-import TSSimpleData from './TSSimpleData.vue'
+import SimpleDataJS from './SimpleDataJS.vue'
+import SimpleDataTS from './SimpleDataTS.vue'
 
 const githubDirectoryUrl = 'https://github.com/jackkoppa/vueconf-2020-typescript-at-politico/blob/master/src/components/comparisons'
 
@@ -14,8 +14,8 @@ const links = {
 export default Vue.extend({
   name: 'SimpleData',
   components: {
-    JSSimpleData,
-    TSSimpleData
+    SimpleDataJS,
+    SimpleDataTS
   },
   data() { return { links } }
 })
@@ -24,11 +24,11 @@ export default Vue.extend({
 <template>
     <div>
         <h2>JavaScript Component (<a :href="links.js">View Code</a>)</h2>
-        <JSSimpleData />
+        <SimpleDataJS />
         <br/>
         <hr>
         <br/>
         <h2>TypeScript Component (<a :href="links.ts">View Code</a>)</h2>
-        <TSSimpleData />
+        <SimpleDataTS />
     </div>
 </template>

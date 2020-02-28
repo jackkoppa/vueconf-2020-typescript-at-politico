@@ -2,7 +2,7 @@
 import axios from 'axios'
 
 export default {
-  name: 'JSSimpleData',
+  name: 'SimpleDataJS',
   data() {
     return { candidates: [] }
   },

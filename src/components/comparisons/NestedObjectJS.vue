@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'JSNestedObject',
+  name: 'NestedObjectJS',
   props: {
     nestedObj: { type: Object }
   },

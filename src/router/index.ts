@@ -53,7 +53,7 @@ const routes = [
         name: 'intro',
         component: () =>
           import(
-            /* webpackChunkName: "comparisonsIntro" */ '@/components/comparisons/ComparisonsIntro.vue'
+            /* webpackChunkName: "comparisonsIntro" */ '@/components/comparisons/~ComparisonsIntro.vue'
           )
       },
       {
@@ -61,7 +61,7 @@ const routes = [
         name: 'simpleData',
         component: () =>
           import(
-            /* webpackChunkName: "simpleData" */ '@/components/comparisons/SimpleData.vue'
+            /* webpackChunkName: "simpleData" */ '@/components/comparisons/~SimpleData.vue'
           )
       }
     ],

@@ -4,7 +4,7 @@ import { candidateApi } from '@/api'
 import { Candidate, CandidatePartyEnum } from '@/api/candidate'
 
 export default Vue.extend({
-  name: 'TSSimpleData',
+  name: 'SimpleDataTS',
   data() {
     return { candidates: [] as Candidate[] }
   },

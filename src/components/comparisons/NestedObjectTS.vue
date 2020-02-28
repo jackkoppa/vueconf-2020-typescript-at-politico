@@ -3,7 +3,7 @@ import Vue from 'vue'
 import { Movie } from '@/api/timesmovies'
 
 export default Vue.extend({
-  name: 'TSNestedObject',
+  name: 'NestedObjectTS',
   props: {
     nestedObj: { type: Object as () => Movie }
   },
